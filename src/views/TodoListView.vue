@@ -49,6 +49,8 @@ export default {
       description: '',
       completed: false
     }
+    // clear form after adding new todo
+    todoStore.newTodo = newTodo
     return {
       todoStore,
       newTodo

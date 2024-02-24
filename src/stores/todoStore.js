@@ -31,6 +31,9 @@ export const useTodoStore = defineStore("todo", {
         completed: false,
       });
       localStorage.setItem("todoList", JSON.stringify(this.todoList));
+      // clear the form
+      newTodo.name = "";
+      newTodo.description = "";
     },
     remove(id) {
       this.todoList = this.todoList.filter((todo) => todo.id !== id);
